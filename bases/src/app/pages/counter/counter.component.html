@@ -1,0 +1,9 @@
+<h1>Valor del counter: {{ counter }}</h1>
+<!-- Como es una senal, debemos invocar la senal como una funcion, ya que una senal es una funcion -->
+<h2>Uso de counter signal: {{ counterSignal() }}</h2>
+<h2>Counter Component Page</h2>
+<hr />
+<!-- los eventos en angular se manejan entre parentesis -->
+<button (click)="increaseBy(1)">+1</button>
+<button (click)="decreaseBy(1)">-1</button>
+<button (click)="resetCounter(0)">Reset</button>
