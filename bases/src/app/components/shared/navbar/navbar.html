@@ -12,9 +12,16 @@
     color: white;
     text-decoration: none;
   }
+
+  /* Agregamos la clase active que va en routerLinkActive */
+  nav a.active {
+    color: cyan;
+    text-decoration: underline;
+  }
 </style>
 
 <nav>
-  <a routerLink="/">Contador</a>
-  <a routerLink="/hero">Hero</a>
+  <!-- Tendra routerLinkActive una clase css entre parentesis -->
+  <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Contador</a>
+  <a [routerLink]="['/hero']" [routerLinkActive]="'active'">Hero</a>
 </nav>
