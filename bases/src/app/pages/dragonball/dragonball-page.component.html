@@ -1,0 +1,31 @@
+<h1>Dragon Page</h1>
+<hr />
+
+<section class="row">
+  <div class="col-12 col-sm-6">
+    <h3>Agregar:</h3>
+    <input type="text" class="form-control" placeholder="Nombre">
+    <input type="number" class="form-control mt-2" placeholder="Poder">
+
+    <button class="mt-2 btn btn-primary">
+      Agregar
+    </button>
+  </div>
+
+  <div class="row">
+    <ol>
+      <!-- el elemento a repetir es el list item o li -->
+      <!-- uso de @for para cambiar la estructura de nuestro html -->
+      <!-- @for(elemento of listaIterable) -->
+      <!-- el track es para darle seguimiento a algun identificador unico -->
+      <!-- como characteres es una senal, se pone aqui con parentesis -->
+      @for (character of characters(); track character.id) {
+        <li>
+          <span>{{ character.name }}</span>
+          <strong class="text-danger">({{ character.power }})</strong>
+        </li>
+      }
+
+    </ol>
+  </div>
+</section>
